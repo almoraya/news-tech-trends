@@ -1,58 +1,45 @@
 ## Docker commands used to build the application 
-$ docker build -t dalmaraya/techtrends:v1.0.0 -f python.dockerfile .
-$ docker push dalmaraya/techtrends:v1.0.0
+docker build -t dalmaraya/techtrends .
 
 ## Docker commands used to run the application
-$ docker run --name techtrends -d -p 7111:3111 dalmaraya/techtrends:v1.0.0
-docker run --name techtrends -p 7111:3111 dalmaraya/techtrends:v1.0.0
+docker run -p 7111:3111 dalmaraya/techtrends
+docker run -d -p 7111:3111 dalmaraya/techtrends
 
 ## Docker commands used to get the application logs
 $ docker logs -f techtrends
 
-
-
 ## Logs from the container running the TechTrends application
-$ docker run --name techtrends -p 7111:3111 dalmaraya/techtrends:v1.0.0
+docker run -p 7111:3111 dalmaraya/techtrends
  * Serving Flask app 'app' (lazy loading)
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
    Use a production WSGI server instead.
  * Debug mode: off
-WARNING   2022-08-23 17:10:34,162   werkzeug  :    * Running on all addresses.
+WARNING   2022-08-23 19:41:33,712   werkzeug  :    * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.  _internal
-INFO   2022-08-23 17:10:34,162   werkzeug  :    * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)  _internal
-INFO   2022-08-23 17:10:40,704   app  :   <<  Connection to database was successful!  >>  app
-INFO   2022-08-23 17:10:40,705   app  :   <<  Fetching all current 6 posts from database  >>  app
-INFO   2022-08-23 17:10:40,727   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:10:40] "GET / HTTP/1.1" 200 -  _internal
-INFO   2022-08-23 17:10:40,819   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:10:40] "GET /static/css/main.css HTTP/1.1" 304 -  _internal
-INFO   2022-08-23 17:10:53,870   app  :   <<  Connection to database was successful!  >>  app
-INFO   2022-08-23 17:10:53,873   app  :   <<  Fetching all current 6 posts from database  >>  app
-INFO   2022-08-23 17:10:53,878   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:10:53] "GET / HTTP/1.1" 200 -  _internal
-INFO   2022-08-23 17:10:53,955   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:10:53] "GET /static/css/main.css HTTP/1.1" 304 -  _internal
-INFO   2022-08-23 17:10:59,932   app  :   <<  Rendering article with post id 2.  >>  app
-INFO   2022-08-23 17:10:59,934   app  :   <<  Article 'KubeCon + CloudNativeCon 2021' was correctly rendered.  >>  app
-INFO   2022-08-23 17:10:59,944   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:10:59] "GET /2 HTTP/1.1" 200 -  _internal
-INFO   2022-08-23 17:11:00,024   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:11:00] "GET /static/css/main.css HTTP/1.1" 304 -  _internal
-DEBUG   2022-08-23 17:11:03,282   app  :   <<  The 'About Us' page was accessed.  >>  app
-INFO   2022-08-23 17:11:03,300   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:11:03] "GET /about HTTP/1.1" 200 -  _internal
-INFO   2022-08-23 17:11:03,341   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:11:03] "GET /static/css/main.css HTTP/1.1" 304 -  _internal
-INFO   2022-08-23 17:11:04,354   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:11:04] "GET /create HTTP/1.1" 200 -  _internal
-INFO   2022-08-23 17:11:04,408   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:11:04] "GET /static/css/main.css HTTP/1.1" 304 -  _internal
-WARNING   2022-08-23 17:11:05,351   app  :   <<  An attempt to add an article without a title was recorded.  >>  app
-INFO   2022-08-23 17:11:05,357   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:11:05] "POST /create HTTP/1.1" 200 -  _internal
-INFO   2022-08-23 17:11:05,392   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:11:05] "GET /static/css/main.css HTTP/1.1" 304 -  _internal
-INFO   2022-08-23 17:11:06,636   app  :   <<  Connection to database was successful!  >>  app
-INFO   2022-08-23 17:11:06,636   app  :   <<  Fetching all current 6 posts from database  >>  app
-INFO   2022-08-23 17:11:06,640   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:11:06] "GET / HTTP/1.1" 200 -  _internal
-INFO   2022-08-23 17:11:06,685   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:11:06] "GET /static/css/main.css HTTP/1.1" 304 -  _internal
-WARNING   2022-08-23 17:11:17,248   app  :   <<  Article with post id 23 does not exist yet!  >>  app
-INFO   2022-08-23 17:11:17,262   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:11:17] "GET /23 HTTP/1.1" 404 -  _internal
-INFO   2022-08-23 17:11:17,312   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:11:17] "GET /static/css/main.css HTTP/1.1" 304 -  _internal
-INFO   2022-08-23 17:11:23,768   app  :   <<  Rendering article with post id 3.  >>  app
-INFO   2022-08-23 17:11:23,768   app  :   <<  Article 'Kubernetes v1.20 Release Notes' was correctly rendered.  >>  app
-INFO   2022-08-23 17:11:23,774   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:11:23] "GET /3 HTTP/1.1" 200 -  _internal
-INFO   2022-08-23 17:11:23,840   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:11:23] "GET /static/css/main.css HTTP/1.1" 304 -  _internal
-DEBUG   2022-08-23 17:11:31,754   app  :   Following metrics were recorded: total connections = 1 and total posts = 6  app
-INFO   2022-08-23 17:11:31,756   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:11:31] "GET /metrics HTTP/1.1" 200 -  _internal
-DEBUG   2022-08-23 17:11:40,397   app  :   Checking the health of db connection  app
-INFO   2022-08-23 17:11:40,400   werkzeug  :   172.17.0.1 - - [23/Aug/2022 17:11:40] "GET /healthz HTTP/1.1" 200 -  _internal
+INFO   2022-08-23 19:41:33,713   werkzeug  :    * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)  _internal
+INFO   2022-08-23 19:41:40,307   app  :   <<  Connection to database was successful!  >>  app
+INFO   2022-08-23 19:41:40,307   app  :   <<  Fetching all current 6 posts from database  >>  app
+INFO   2022-08-23 19:41:40,331   werkzeug  :   172.17.0.1 - - [23/Aug/2022 19:41:40] "GET / HTTP/1.1" 200 -  _internal
+INFO   2022-08-23 19:41:40,402   werkzeug  :   172.17.0.1 - - [23/Aug/2022 19:41:40] "GET /static/css/main.css HTTP/1.1" 200 -  _internal
+INFO   2022-08-23 19:41:40,512   werkzeug  :   172.17.0.1 - - [23/Aug/2022 19:41:40] "GET /favicon.ico HTTP/1.1" 404 -  _internal
+INFO   2022-08-23 19:41:47,700   app  :   <<  Rendering article with post id 3.  >>  app
+INFO   2022-08-23 19:41:47,700   app  :   <<  Article 'Kubernetes v1.20 Release Notes' was correctly rendered.  >>  app
+INFO   2022-08-23 19:41:47,715   werkzeug  :   172.17.0.1 - - [23/Aug/2022 19:41:47] "GET /3 HTTP/1.1" 200 -  _internal
+INFO   2022-08-23 19:41:47,754   werkzeug  :   172.17.0.1 - - [23/Aug/2022 19:41:47] "GET /static/css/main.css HTTP/1.1" 304 -  _internal
+INFO   2022-08-23 19:41:53,516   werkzeug  :   172.17.0.1 - - [23/Aug/2022 19:41:53] "GET /create HTTP/1.1" 200 -  _internal
+INFO   2022-08-23 19:41:53,560   werkzeug  :   172.17.0.1 - - [23/Aug/2022 19:41:53] "GET /static/css/main.css HTTP/1.1" 304 -  _internal
+WARNING   2022-08-23 19:41:54,739   app  :   <<  An attempt to add an article without a title was recorded.  >>  app
+INFO   2022-08-23 19:41:54,742   werkzeug  :   172.17.0.1 - - [23/Aug/2022 19:41:54] "POST /create HTTP/1.1" 200 -  _internal
+INFO   2022-08-23 19:41:54,781   werkzeug  :   172.17.0.1 - - [23/Aug/2022 19:41:54] "GET /static/css/main.css HTTP/1.1" 304 -  _internal
+DEBUG   2022-08-23 19:41:58,174   app  :   <<  The 'About Us' page was accessed.  >>  app
+INFO   2022-08-23 19:41:58,179   werkzeug  :   172.17.0.1 - - [23/Aug/2022 19:41:58] "GET /about HTTP/1.1" 200 -  _internal
+INFO   2022-08-23 19:41:58,218   werkzeug  :   172.17.0.1 - - [23/Aug/2022 19:41:58] "GET /static/css/main.css HTTP/1.1" 304 -  _internal
+DEBUG   2022-08-23 19:42:06,870   app  :   Checking the health of db connection  app
+INFO   2022-08-23 19:42:06,871   werkzeug  :   172.17.0.1 - - [23/Aug/2022 19:42:06] "GET /healthz HTTP/1.1" 200 -  _internal
+DEBUG   2022-08-23 19:42:13,696   app  :   Following metrics were recorded: total connections = 1 and total posts = 6  app
+INFO   2022-08-23 19:42:13,696   werkzeug  :   172.17.0.1 - - [23/Aug/2022 19:42:13] "GET /metrics HTTP/1.1" 200 -  _internal
+INFO   2022-08-23 19:43:45,336   app  :   <<  Connection to database was successful!  >>  app
+INFO   2022-08-23 19:43:45,336   app  :   <<  Fetching all current 6 posts from database  >>  app
+INFO   2022-08-23 19:43:45,338   werkzeug  :   172.17.0.1 - - [23/Aug/2022 19:43:45] "GET / HTTP/1.1" 200 -  _internal
+INFO   2022-08-23 19:43:45,393   werkzeug  :   172.17.0.1 - - [23/Aug/2022 19:43:45] "GET /static/css/main.css HTTP/1.1" 304 -  _internal

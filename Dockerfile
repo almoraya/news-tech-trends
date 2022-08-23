@@ -2,7 +2,7 @@ FROM        python:3.8
 
 LABEL       author="Alexander M A"
 
-COPY        . /app
+COPY        ./techtrends ./app
 
 WORKDIR     /app
 
