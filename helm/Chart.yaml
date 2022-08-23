@@ -1,0 +1,11 @@
+apiVersion: v1
+name: techtrends 
+description: Deployment of a Flask App about Tech Trends
+keywords:
+- techtrends
+- flask
+- python 
+version: 1.0.0
+maintainers:
+- name: Alexander M A 
+  email: almoraya@youtoo.com
