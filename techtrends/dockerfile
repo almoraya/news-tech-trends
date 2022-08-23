@@ -1,0 +1,17 @@
+FROM        python:3.8
+
+LABEL       author="almoraya"
+
+COPY        . /app
+
+WORKDIR     /app
+
+RUN         python -m venv /opt/venv
+RUN         . /opt/venv/bin/activate
+RUN         python -m pip install --upgrade pip && pip install -r requirements.txt
+
+RUN         python init_db.py
+
+EXPOSE      3111
+
+CMD         . /opt/venv/bin/activate && exec python app.py
