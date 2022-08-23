@@ -34,4 +34,4 @@ jobs:
           file: ./python.dockerfile
           platforms: linux/amd64
           push: true
-          tags: dalmaraya/techtrends:v1.0.0:latest
+          tags: dalmaraya/techtrends:latest
