@@ -4,9 +4,9 @@ metadata:
   labels:
     app: techtrends
   name: techtrends
-  namespace: staging
+  namespace: prod
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: techtrends
