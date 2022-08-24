@@ -1,21 +1,28 @@
-INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
-DEBUG:techtrends.app:<<  The 'About Us' page was accessed.  >>
-INFO:werkzeug:127.0.0.1 - - [23/Aug/2022 18:28:13] "GET /about HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [23/Aug/2022 18:28:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-INFO:techtrends.app:<<  Connection to database was successful!  >>
-INFO:techtrends.app:<<  Fetching all current 8 posts from database  >>
-INFO:werkzeug:127.0.0.1 - - [23/Aug/2022 18:28:16] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [23/Aug/2022 18:28:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [23/Aug/2022 18:28:21] "GET /create HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [23/Aug/2022 18:28:21] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-DEBUG:techtrends.app:<<  The 'About Us' page was accessed.  >>
-INFO:werkzeug:127.0.0.1 - - [23/Aug/2022 18:28:22] "GET /about HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [23/Aug/2022 18:28:22] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-INFO:techtrends.app:<<  Connection to database was successful!  >>
-INFO:techtrends.app:<<  Fetching all current 8 posts from database  >>
-INFO:werkzeug:127.0.0.1 - - [23/Aug/2022 18:28:24] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [23/Aug/2022 18:28:24] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-INFO:techtrends.app:<<  Rendering article with post id 6.  >>
-INFO:techtrends.app:<<  Article 'Kubernetes Certification' was correctly rendered.  >>
-INFO:werkzeug:127.0.0.1 - - [23/Aug/2022 18:28:26] "GET /6 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [23/Aug/2022 18:28:26] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO   2022-08-24 12:07:46,398   werkzeug  :    * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)  {_internal.py: 224}
+INFO   2022-08-24 12:07:48,862   techtrends.app  :   <<  Connection to database was successful!  >>  {app.py: 71}
+INFO   2022-08-24 12:07:48,870   techtrends.app  :   <<  Fetching all current 6 posts from database  >>  {app.py: 72}
+INFO   2022-08-24 12:07:49,010   werkzeug  :   127.0.0.1 - - [24/Aug/2022 12:07:49] "GET / HTTP/1.1" 200 -  {_internal.py: 224}
+INFO   2022-08-24 12:07:49,110   werkzeug  :   127.0.0.1 - - [24/Aug/2022 12:07:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -  {_internal.py: 224}
+INFO   2022-08-24 12:07:52,040   techtrends.app  :   <<  Rendering article with post id 5.  >>  {app.py: 85}
+INFO   2022-08-24 12:07:52,043   techtrends.app  :   <<  Article 'CNCF Cloud Native Definition v1.0' was correctly rendered.  >>  {app.py: 86}
+INFO   2022-08-24 12:07:52,077   werkzeug  :   127.0.0.1 - - [24/Aug/2022 12:07:52] "GET /5 HTTP/1.1" 200 -  {_internal.py: 224}
+INFO   2022-08-24 12:07:52,148   werkzeug  :   127.0.0.1 - - [24/Aug/2022 12:07:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -  {_internal.py: 224}
+DEBUG   2022-08-24 12:07:55,541   techtrends.app  :   <<  The 'About Us' page was accessed.  >>  {app.py: 92}
+INFO   2022-08-24 12:07:55,559   werkzeug  :   127.0.0.1 - - [24/Aug/2022 12:07:55] "GET /about HTTP/1.1" 200 -  {_internal.py: 224}
+INFO   2022-08-24 12:07:55,603   werkzeug  :   127.0.0.1 - - [24/Aug/2022 12:07:55] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -  {_internal.py: 224}
+INFO   2022-08-24 12:07:56,644   werkzeug  :   127.0.0.1 - - [24/Aug/2022 12:07:56] "GET /create HTTP/1.1" 200 -  {_internal.py: 224}
+INFO   2022-08-24 12:07:56,680   werkzeug  :   127.0.0.1 - - [24/Aug/2022 12:07:56] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -  {_internal.py: 224}
+WARNING   2022-08-24 12:07:57,933   techtrends.app  :   <<  An attempt to add an article without a title was recorded.  >>  {app.py: 104}
+INFO   2022-08-24 12:07:57,936   werkzeug  :   127.0.0.1 - - [24/Aug/2022 12:07:57] "POST /create HTTP/1.1" 200 -  {_internal.py: 224}
+INFO   2022-08-24 12:07:57,975   werkzeug  :   127.0.0.1 - - [24/Aug/2022 12:07:57] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -  {_internal.py: 224}
+DEBUG   2022-08-24 12:08:05,256   techtrends.app  :   Following metrics were recorded: total connections = 1 and total posts = 6  {app.py: 168}
+INFO   2022-08-24 12:08:05,257   werkzeug  :   127.0.0.1 - - [24/Aug/2022 12:08:05] "GET /metrics HTTP/1.1" 200 -  {_internal.py: 224}
+DEBUG   2022-08-24 12:08:12,315   techtrends.app  :   Checking the health of db connection  {app.py: 143}
+INFO   2022-08-24 12:08:12,317   werkzeug  :   127.0.0.1 - - [24/Aug/2022 12:08:12] "GET /healthz HTTP/1.1" 200 -  {_internal.py: 224}
+WARNING   2022-08-24 12:08:24,198   techtrends.app  :   <<  Article with post id 404 does not exist yet!  >>  {app.py: 81}
+INFO   2022-08-24 12:08:24,203   werkzeug  :   127.0.0.1 - - [24/Aug/2022 12:08:24] "[33mGET /404 HTTP/1.1[0m" 404 -  {_internal.py: 224}
+INFO   2022-08-24 12:08:24,251   werkzeug  :   127.0.0.1 - - [24/Aug/2022 12:08:24] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -  {_internal.py: 224}
+INFO   2022-08-24 12:08:28,783   techtrends.app  :   <<  Connection to database was successful!  >>  {app.py: 71}
+INFO   2022-08-24 12:08:28,784   techtrends.app  :   <<  Fetching all current 6 posts from database  >>  {app.py: 72}
+INFO   2022-08-24 12:08:28,786   werkzeug  :   127.0.0.1 - - [24/Aug/2022 12:08:28] "GET / HTTP/1.1" 200 -  {_internal.py: 224}
+INFO   2022-08-24 12:08:28,824   werkzeug  :   127.0.0.1 - - [24/Aug/2022 12:08:28] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -  {_internal.py: 224}

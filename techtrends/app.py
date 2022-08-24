@@ -2,6 +2,7 @@ from crypt import methods
 import sqlite3
 from urllib import response
 import logging
+import sys
 
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
@@ -28,13 +29,27 @@ def get_post(post_id):
 
 ################################################################################################
 
+#https://pyquestions.com/making-python-loggers-output-all-messages-to-stdout-in-addition-to-log-file
+# set logger to handle STDOUT and STDERR
 
-## https://circleci.com/blog/application-logging-with-flask/#c-consent-modal
+file_handler = logging.FileHandler(filename='app.log') 
+stdout_handler =  logging.StreamHandler(sys.stdout)
+stderr_handler =  logging.StreamHandler(sys.stderr)
+handlers = [file_handler, stderr_handler, stdout_handler]
+ 
+# format output
+format_output = '%(levelname)s   %(asctime)s   %(name)s  :   %(message)s  {%(filename)s: %(lineno)d}'
+
+
+## configuring the basicConfig file
 logging.basicConfig(
     #filename='app.log',
     level=logging.DEBUG,
-    format='%(levelname)s   %(asctime)s   %(name)s  :   %(message)s  %(module)s'
+    format=format_output,
+    handlers=handlers
 )
+
+
 
 
 # Define the Flask application
