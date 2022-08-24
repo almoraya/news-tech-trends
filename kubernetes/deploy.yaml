@@ -4,9 +4,9 @@ metadata:
   labels:
     app: techtrends
   name: techtrends
-  namespace: sandbox
+  namespace: staging
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: techtrends
@@ -39,9 +39,9 @@ spec:
           initialDelaySeconds: 3
           periodSeconds: 3
         resources:
-          requests:
-            cpu: 250m
-            memory: 64Mi
+          requests:            
+            memory: 90Mi
+            cpu: 300m
           limits:
-            cpu: 500m
-            memory: 128Mi         
+            memory: 128Mi
+            cpu: 500m         
